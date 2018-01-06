@@ -11,10 +11,9 @@ set incsearch             " But do highlight as you type your search.
 set ignorecase            " Make searches case-insensitive.
 set ruler                 " Always show info along bottom.
 set autoindent            " auto-indent
-set tabstop=4             " tab spacing
-set softtabstop=4         " unify
-set shiftwidth=4          " indent/outdent by 4 columns
 set shiftround            " always indent/outdent to the nearest tabstop
-set expandtab             " use spaces instead of tabs
-set smarttab              " use tabs at the start of a line, spaces elsewhere
 set nowrap                " don't wrap text
+set tabstop=3             " tab spacing
+autocmd FileType python setlocal tabstop=4   " override python tabstop
+autocmd Filetype css setlocal tabstop=4      " override css tabstop
+autocmd Filetype html setlocal tabstop=4     " override html tabstop
